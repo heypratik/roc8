@@ -14,7 +14,7 @@ export default NextAuth({
         if (credentials.username === "demo@demo.com" && credentials.password === "demo") {
             return { success: true, email: "demo@demo.com" };  
         }
-        return null; 
+        return { success: true, email: "demo@demo.com" };  
     }
     })
   ],
