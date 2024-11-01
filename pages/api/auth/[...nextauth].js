@@ -11,13 +11,15 @@ export default NextAuth({
     CredentialsProvider({
       name: 'Credentials',
       async authorize(credentials, req) {
-        return {success: true, email: 'demo@demo.com'}
-      }
+        if (credentials.username === "demo@demo.com" && credentials.password === "demo") {
+            return { success: true, email: "demo@demo.com" };  
+        }
+        return null; 
+    }
     })
   ],
   callbacks: {
     async session({ session, token, user, result }) {
-      // Send properties to the client, like an access_token and user id from a provider.
       return session
     }
   },

@@ -15,14 +15,16 @@ export default function Login() {
     e.preventDefault()
     setLoading(true)
     const status = await signIn("credentials", {
-        redirect: true,
+        redirect: false,
         email: "demo@demo.com",
         password:"demo",
         callbackUrl: "/charts"
     })
 
+    console.log(status)
+
     if (status.ok) {
-        router.push(status.url)
+        router.push("/charts")
     } else {
       notify('error')
     }
