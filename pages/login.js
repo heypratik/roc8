@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { signIn } from "next-auth/react"
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import {AiOutlineLoading3Quarters} from 'react-icons/ai'
 
 export default function Login() {
