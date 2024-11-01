@@ -15,7 +15,7 @@ export default function Login() {
     e.preventDefault()
     setLoading(true)
     const status = await signIn("credentials", {
-        redirect: false,
+        redirect: true,
         email: "demo@demo.com",
         password:"demo",
         callbackUrl: "/charts"
