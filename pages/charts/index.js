@@ -19,8 +19,6 @@ import {
   Zoom,
 } from "@syncfusion/ej2-react-charts";
 import Cookies from "js-cookie";
-import { data } from "./datasource";
-
 registerLicense("Ngo9BigBOggjHTQxAR8/V1NDaF5cWWtCf1JpQnxbf1x0ZFRGallYTnVeUiweQnxTdEFiWXxfcXRQT2NdVUxzWQ==");
 
 function Charts({session}) {
